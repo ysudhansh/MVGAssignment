@@ -1,3 +1,3 @@
 # MVGAssignment
 
-RRC Summer School MVG Assignment
+RRC Summer School 2020 MVG Assignment
