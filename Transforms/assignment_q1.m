@@ -1,4 +1,4 @@
-function assignment_q1()
+function [points, res] = assignment_q1()
 
 points = importdata("lidar.txt");
 points = [points, ones(size(points,1),1)];
@@ -11,7 +11,7 @@ res = [out(1,:)./out(3,:); out(2,:)./out(3,:)];
 imshow("image.png");
 axis on;
 hold on;
-scatter(res(1,:), res(2,:),'.');
+scatter(res(1,:), res(2,:),[],'.',c);
 depth = points(1,:)';
 depth = (depth - min(depth)); % Did this because there are some negative values
 depth = depth ./ max(depth); % Have to bring it to [0 1] range
