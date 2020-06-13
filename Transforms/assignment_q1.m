@@ -11,12 +11,11 @@ res = [out(1,:)./out(3,:); out(2,:)./out(3,:)];
 imshow("image.png");
 axis on;
 hold on;
-scatter(res(1,:), res(2,:),[],'.',c);
+colormap default;
 depth = points(1,:)';
 depth = (depth - min(depth)); % Did this because there are some negative values
 depth = depth ./ max(depth); % Have to bring it to [0 1] range
 cmap = [depth depth depth];
-colormap(cmap);
-colorbar;
-% colormap default;
+scatter(res(1,:), res(2,:),'.', colormap(cmap));
+
 end
