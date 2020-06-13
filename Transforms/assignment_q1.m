@@ -15,7 +15,7 @@ colormap default;
 depth = points(1,:)';
 depth = (depth - min(depth)); % Did this because there are some negative values
 depth = depth ./ max(depth); % Have to bring it to [0 1] range
-cmap = [depth depth depth];
-scatter(res(1,:), res(2,:),'.', colormap(cmap));
+cmap = depth;
+scatter(res(1,:), res(2,:), 10, cmap, "filled");
 
 end
